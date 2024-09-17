@@ -8,11 +8,15 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Give speed:");
-        int speed = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the first number:");
+        int pirmais = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give the second number:");
+        int otrais = Integer.valueOf(scanner.nextLine());
 
-        if (speed > 120) {
-            System.out.println("Speeding ticket!");
+        if (pirmais > otrais) {
+            System.out.println("Greater number is:" + pirmais);
+        } else {
+            System.out.println("Greater number is:" + otrais);
         }
         scanner.close();
     }
