@@ -6,13 +6,15 @@ public class App
 {
     public static void main( String[] args )
     {
-        String name = "Kristaps";
-        int age = 17;
-        boolean online = false;
+        Scanner scanner = new Scanner(System.in);
         
-        System.out.println(name);
-        System.out.println(age);
-        System.out.println(online);
+        System.out.println("Give speed:");
+        int speed = Integer.valueOf(scanner.nextLine());
+
+        if (speed > 120) {
+            System.out.println("Speeding ticket!");
+        }
+        scanner.close();
     }
 
 }
