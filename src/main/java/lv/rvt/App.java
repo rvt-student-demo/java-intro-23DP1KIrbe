@@ -1,7 +1,6 @@
 package lv.rvt;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
+import java.util.Scanner;
 
 public class App 
 {
