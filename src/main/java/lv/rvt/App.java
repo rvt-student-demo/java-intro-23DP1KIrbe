@@ -15,8 +15,10 @@ public class App
 
         if (pirmais > otrais) {
             System.out.println("Greater number is:" + pirmais);
-        } else {
+        } else if (otrais > pirmais) {
             System.out.println("Greater number is:" + otrais);
+        } else {
+            System.out.println("The numbers are equal!");
         }
         scanner.close();
     }
