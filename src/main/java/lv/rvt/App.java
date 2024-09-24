@@ -8,24 +8,13 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
-         int summa = 0;
-         int count = 0;
-
-        
-        while(true) {
-            System.out.println("Enter the number:");
-            int number = Integer.valueOf(scanner.nextLine());
-
-            if (number == 0) {
-                break;
-            }
-            summa += number;
-            count++;
-            
-
+        System.out.println("Enter n:");
+        int n = Integer.valueOf(scanner.nextLine());
+        int sum = 0;
+        for(int i = 1; i<=n; i++){
+            sum += i;
         }
-        System.out.println("Number of numbers:" + count);
-        System.out.println("Sum of numbers:" + summa);
+        System.out.println(sum);
         scanner.close();
     }
 
