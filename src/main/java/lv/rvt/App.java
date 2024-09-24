@@ -8,14 +8,14 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Enter n:");
-        int n = Integer.valueOf(scanner.nextLine());
-        int sum = 0;
-        for(int i = 1; i<=n; i++){
-            sum += i;
-        }
-        System.out.println(sum);
-        scanner.close();
-    }
+        System.out.println("Enter the start number:");
+        int start = Integer.valueOf(scanner.nextLine());
 
+        for(int i = start; i <=100; i++) {
+            System.out.println(i);
+        }
+
+        scanner.close();
+
+}
 }
