@@ -8,14 +8,35 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         
-        System.out.println("Enter the start number:");
-        int start = Integer.valueOf(scanner.nextLine());
+        System.out.println("Give numbers:");
 
-        for(int i = start; i <=100; i++) {
-            System.out.println(i);
+        int sum = 0;
+        int count = 0;
+        int even = 0;
+        int odd = 0;
+
+        while(true) {
+            int input = Integer.valueOf(scanner.nextLine());
+            
+            if (input != -1) {
+                sum += input;
+                count++;
+                if (input % 2 ==0) {
+                    even++;
+                } else {
+                    odd++;
+                }
+
+            } else {
+                break;
+            }
         }
-
-        scanner.close();
-
-}
+            System.out.println("Thx! Bye!");
+            System.out.println("Sum: " + sum);
+            System.out.println("Numbers: " + count);
+            System.out.println("Average: " + ((double)sum/count));
+            System.out.println("Even: " + even);
+            System.out.println("Odd: " + odd);
+        
+    }
 }
