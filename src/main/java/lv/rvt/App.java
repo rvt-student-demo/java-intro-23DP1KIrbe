@@ -6,21 +6,44 @@ import java.util.Scanner;
 public class App 
 {
     public static void main( String[] args ) {
-        
-        ArrayList<String> name = new ArrayList<>(); 
         Scanner scanner = new Scanner(System.in);
-        String aa = "1";
-        while(aa != ""){
-            String bb = scanner.nextLine();
-            if(bb.equals("")){
-                aa = "";
-            }
-            name.add(bb);
-        }
-        System.out.println(name.get(2));
-
         
+        ArrayList<Integer> list = new ArrayList<>();
+        int number;
+        System.out.println("Enter numbers (enter -1 to break): ");
+        while(true){
 
+            number = scanner.nextInt();
+            list.add(number);
+            if (number == -1) {
+                break;
+            }
+        }
+
+        int nn = 0;
+        int ff = 0;
+
+        while(true){
+            System.out.println("From where" );
+            nn = scanner.nextInt();
+            if(nn < 0){
+                System.out.println("Not valid number");
+            }else{
+                break;
+            }
+        }
+        while(true){
+            System.out.println("To where: ");
+            ff = scanner.nextInt();
+            if(ff < list.size()){
+                System.out.println("Not valid number");
+            }else{
+                break;
+            }
+        }
+        for(int i = nn; i <= ff; i++){
+            System.out.println(list.get(i));
+        }
         scanner.close();
     }
 }
