@@ -12,12 +12,12 @@ public class PersonManager {
 
         reader.readLine();
         String line;
-        Person person1 = new Person("Maija");
+        Person person1 = new Person("Maija", 5, 124, 135);
 
         while((line = reader.readLine()) != null) {
             String[] parts = line.split(", ");
-            Person person = new Person(parts[0], Integer.valueOf(parts[1]), Double.valueOf(parts[2]), Double.valueOf(parts[3]));
-            persons.add(persons);
+            Person person = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
+            persons.add(person);
             
         }
 
