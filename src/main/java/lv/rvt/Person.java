@@ -4,10 +4,10 @@ public class Person {
     private String name;
     private int age;
     private String group;
-    private int weight;
-    private int height;
+    private double weight;
+    private double height;
 
-    public Person(String name, Integer age, int weight,  int height) {
+    public Person(String name, int age, double weight,  double height) {
         this.age = age;
         this.weight = weight;
         this.height = height;
@@ -38,6 +38,14 @@ public class Person {
         return this.group;
     }
 
+    public double getHeight() {
+        return this.height;
+    }
+
+    public double getWeight() {
+        return this.weight;
+    }
+
     public void growOlder() {
         if(this.age < 30) {
             this.age++;
@@ -61,7 +69,11 @@ public class Person {
         return this.weight / (heightPerHundred * heightPerHundred);
     }
 
-    public String toString() {
+    // public String toString() {
+    //     return this.name+ ", " + this.age + ", " + this.weight + ", " + this.height;
+    // }
+
+    public String toCsvRow() {
         return this.name+ ", " + this.age + ", " + this.weight + ", " + this.height;
     }
 

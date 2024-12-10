@@ -12,7 +12,7 @@ public class FileReading {
         
         ArrayList<Person> persons = new ArrayList<>();
         
-        BufferedReader reader = Utils.getReader("persons.csv");
+        BufferedReader reader = Helper.getReader("persons.csv");
     
         String line;
         
