@@ -18,12 +18,16 @@ public class App
         System.out.println(ada);
         System.out.println(esko);
         
+        // Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
+        // System.out.println(ollie);
+        // System.out.println("Study credits " + ollie.credits());
+        // ollie.study();
+        // System.out.println("Study credits "+ ollie.credits());
+        
         Student ollie = new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028");
         System.out.println(ollie);
-        System.out.println("Study credits " + ollie.credits());
         ollie.study();
-        System.out.println("Study credits "+ ollie.credits());
-        
+        System.out.println(ollie);
         
         
         
