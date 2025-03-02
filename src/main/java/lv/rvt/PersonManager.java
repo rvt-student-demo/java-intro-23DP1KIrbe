@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import lv.rvt.Helper;
 
 public class PersonManager {
-    public static ArrayList<Person> getPersonList() throws Exception{
+    public static ArrayList<PersonVecs> getPersonList() throws Exception{
 
-        ArrayList<Person> persons = new ArrayList<>();
+        ArrayList<PersonVecs> persons = new ArrayList<>();
         BufferedReader reader = Helper.getReader("Persons.csv");
 
         reader.readLine();
@@ -18,13 +18,13 @@ public class PersonManager {
 
         while((line = reader.readLine()) != null) {
             String[] parts = line.split(", ");
-            Person person = new Person(parts[0], Integer.valueOf(parts[1]), Double.valueOf(parts[2]), Double.valueOf(parts[3]));
+            PersonVecs person = new PersonVecs(parts[0], Integer.valueOf(parts[1]), Double.valueOf(parts[2]), Double.valueOf(parts[3]));
             persons.add(person);
         }
         return persons;
     }
 
-    public static void addPerson (Person person) throws Exception {
+    public static void addPerson (PersonVecs person) throws Exception {
         BufferedWriter writer = Helper.getWriter("Persons.csv", StandardOpenOption.APPEND);
 
         writer.write(person.toCsvRow());

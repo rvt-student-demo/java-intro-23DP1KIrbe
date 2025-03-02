@@ -1,6 +1,6 @@
 package lv.rvt;
 
-public class Student extends Personn {
+public class Student extends Person {
 
     private int credits = 0;
     private String name;

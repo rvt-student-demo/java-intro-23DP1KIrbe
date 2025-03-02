@@ -10,7 +10,7 @@ public class FileReading {
     
     public static void main(String[] arga) throws Exception {
         
-        ArrayList<Person> persons = new ArrayList<>();
+        ArrayList<PersonVecs> persons = new ArrayList<>();
         
         BufferedReader reader = Helper.getReader("persons.csv");
     
@@ -33,7 +33,7 @@ public class FileReading {
             String[] parts = line.split(", ");
             
 
-            Person person1 = new Person(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
+            PersonVecs person1 = new PersonVecs(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
             persons.add(person1);
 
             
@@ -42,7 +42,7 @@ public class FileReading {
 
         }
 
-        for (Person person1 : persons){
+        for (PersonVecs person1 : persons){
             System.out.println(person1);
         }
 
