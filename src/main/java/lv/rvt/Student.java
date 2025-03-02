@@ -26,6 +26,6 @@ public class Student extends Personn {
 
     
     public String toString() {
-        return this.name + "\n" + this.street + "\n" + this.credits;
+        return this.name + "\n " + this.street + "\n " + this.credits;
     }
 }
